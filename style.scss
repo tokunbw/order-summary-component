@@ -129,6 +129,13 @@ img {
 }
 
 @include laptop-query {
+	body {
+		background-image: url(./images/pattern-background-desktop.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 40vh;
+	}
 	a:hover,
 	a:focus {
 		text-decoration: none;
