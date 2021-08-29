@@ -25,6 +25,11 @@ body {
 	line-height: 1;
 	background: $pale-blue;
 	color: #343a40;
+	background-image: url(./images/pattern-background-desktop.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 40vh;
 }
 
 h2,
@@ -42,8 +47,7 @@ img {
 
 @include tablet-query {
 	.container {
-		max-width: 1140px;
-		margin: 25px auto;
+		margin: 40px auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -51,7 +55,7 @@ img {
 
 	.order__card {
 		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-		max-width: 400px;
+		max-width: 450px;
 		background: #fff;
 		border-radius: 1rem;
 		overflow: hidden;
@@ -60,6 +64,7 @@ img {
 		justify-content: center;
 		align-items: center;
 		gap: 32px;
+		transform: scale(0.8);
 
 		.order__text {
 			display: flex;
@@ -99,6 +104,11 @@ img {
 			font-size: 14px;
 			color: $bright-blue;
 		}
+
+		a:hover,
+		a:focus {
+			text-decoration: none;
+		}
 	}
 
 	.order__option {
@@ -120,39 +130,42 @@ img {
 			box-shadow: 0 20px 30px rgba(56, 41, 224, 0.3);
 			cursor: pointer;
 		}
+		.btn:hover,
+		.btn:focus {
+			background: rgb(116, 105, 233);
+		}
 
 		p {
 			margin-bottom: 24px;
 			font-weight: 500;
 		}
+
+		p:hover,
+		p:focus {
+			color: #343a40;
+			cursor: pointer;
+			font-weight: 700;
+		}
 	}
 }
 
 @include laptop-query {
-	body {
-		background-image: url(./images/pattern-background-desktop.svg);
-		background-size: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		height: 40vh;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: none;
+	.order__card {
+		transform: scale(1);
+
+		.order__text {
+			h2 {
+				margin-bottom: 4px;
+			}
+
+			p {
+				width: 300px;
+				line-height: 1.7;
+			}
+		}
 	}
 
 	.order__option .btn {
 		padding: 16px 80px;
-	}
-	.btn:hover,
-	.btn:focus {
-		background: rgb(116, 105, 233);
-	}
-
-	.order__option p:hover,
-	.order__option p:focus {
-		color: #343a40;
-		cursor: pointer;
-		font-weight: 700;
 	}
 }
