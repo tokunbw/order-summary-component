@@ -30,6 +30,7 @@ body {
 	background-position: center;
 	background-size: cover;
 	height: 40vh;
+	position: relative;
 }
 
 h2,
@@ -47,10 +48,14 @@ img {
 
 @include tablet-query {
 	.container {
-		margin: 40px auto;
+		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -15%);
 	}
 
 	.order__card {
@@ -103,11 +108,13 @@ img {
 		a:visited {
 			font-size: 14px;
 			color: $bright-blue;
+			font-weight: 900;
 		}
 
 		a:hover,
 		a:focus {
 			text-decoration: none;
+			color: $desaturated-blue;
 		}
 	}
 
@@ -142,7 +149,7 @@ img {
 
 		p:hover,
 		p:focus {
-			color: #343a40;
+			color: $dark-blue;
 			cursor: pointer;
 			font-weight: 700;
 		}
@@ -167,5 +174,6 @@ img {
 
 	.order__option .btn {
 		padding: 16px 80px;
+		// hsl(245, 75%, 52%)
 	}
 }

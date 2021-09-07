@@ -24,6 +24,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 40vh;
+  position: relative;
 }
 
 h2,
@@ -41,7 +42,7 @@ img {
 
 @media screen and (min-width: 375px) {
   .container {
-    margin: 40px auto;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -51,6 +52,11 @@ img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -15%);
+            transform: translate(-50%, -15%);
   }
   .order__card {
     -webkit-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -124,10 +130,12 @@ img {
   .order__plan a:visited {
     font-size: 14px;
     color: #3829e0;
+    font-weight: 900;
   }
   .order__plan a:hover,
   .order__plan a:focus {
     text-decoration: none;
+    color: #7280a7;
   }
   .order__option {
     display: -webkit-box;
@@ -168,7 +176,7 @@ img {
   }
   .order__option p:hover,
   .order__option p:focus {
-    color: #343a40;
+    color: #1f2f56;
     cursor: pointer;
     font-weight: 700;
   }
